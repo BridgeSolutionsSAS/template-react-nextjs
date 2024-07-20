@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "image:dev": "docker-compose -f devops/development/docker-compose.yml up --build",
+    "image:prod": "docker-compose -f devops/production/docker-compose.yml up --build"
   },
   "dependencies": {
     "react": "^18",

@@ -1,0 +1,13 @@
+services:
+  next-docker:
+    build:
+      context: ../..
+      dockerfile: devops/development/Dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+      - ../..:/app
+      - /app/node_modules
+    env_file:
+      - ../../.env
+    command: npm run dev
